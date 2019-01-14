@@ -9,7 +9,7 @@ export default {
   name: 'Welcome',
   data () {
     return {
-      tagline: 'Welcome to Your Vue.js App'
+      tagline: 'Welcome! My Portfolio is Under Construction...'
     }
   }
 }
@@ -18,7 +18,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
-  font-weight: normal;
+  font-weight: bold;
+  margin-top: 200px;
 }
 ul {
   list-style-type: none;

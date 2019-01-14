@@ -20,6 +20,8 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
 body {
   background-color: #8ED4DA;
   padding: 25px 5%;
@@ -36,12 +38,13 @@ a {
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Poiret One', cursive, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 0px;
+  height: 100%;
 }
 
 #bmr-container {
