@@ -19,7 +19,6 @@ export default {
 <style scoped>
 h1, h2 {
   font-weight: bold;
-  margin-top: 200px;
 }
 ul {
   list-style-type: none;
@@ -31,5 +30,12 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.welcome {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
