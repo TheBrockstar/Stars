@@ -1,6 +1,6 @@
 <template>
   <div class="welcome">
-    <h1>{{ tagline }}</h1>
+    <h1>Welcome! <br/><br/>{{ greeting }}<br/><br/>{{ tagline }}</h1>
     <div class='stars' id='dwarf-stars'></div>
     <div class='stars' id='giant-stars'></div>
     <div class='stars' id='supergiant-stars'></div>
@@ -12,7 +12,8 @@ export default {
   name: 'Welcome',
   data () {
     return {
-      tagline: 'Welcome! My Portfolio is Under Construction...'
+      greeting: 'Pardon the Stardust... ',
+      tagline: 'My Portfolio is Under Construction'
     }
   }
 }
