@@ -1,9 +1,6 @@
 <template>
   <div class="welcome">
-    <h1>Welcome! <br/><br/>{{ greeting }}<br/><br/>{{ tagline }}</h1>
-    <div class='stars' id='dwarf-stars'></div>
-    <div class='stars' id='giant-stars'></div>
-    <div class='stars' id='supergiant-stars'></div>
+    <h1>A long time ago <br/><br/>{{ greeting }}<br/><br/>{{ tagline }}</h1>
   </div>
 </template>
 
@@ -12,8 +9,8 @@ export default {
   name: 'Story',
   data () {
     return {
-      greeting: 'Pardon the Stars... ',
-      tagline: 'My Portfolio is Under Construction'
+      greeting: 'in a galaxy far, far away... ',
+      tagline: 'My Portfolio Was Still Under Construction'
     }
   }
 }

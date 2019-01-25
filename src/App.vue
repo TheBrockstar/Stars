@@ -1,17 +1,19 @@
 <template>
   <div id="app">
     <div id="bmr-container">
-      <img src="./assets/logo-grey.png">
+      <router-link to="/" class="logo"><img src="./assets/logo-grey.png"></router-link>
       <div class="navigation">
         <router-link to="/story">Story</router-link>
-        <a href="/">Projects</a>
-        <a href="/">Contact</a>
+        <router-link to="/projects">Projects</router-link >
+        <router-link to="/contact">Contact</router-link>
       </div>
     </div>
     <div class='stars' id='dwarf-stars'></div>
     <div class='stars' id='giant-stars'></div>
     <div class='stars' id='supergiant-stars'></div>
-    <router-view/>
+    <transition name="fade" mode="out-in">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -38,6 +40,7 @@ export default {
 
 html, body, #app {
   height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -46,7 +49,7 @@ body {
   margin: 0;
 }
 
-img {
+.logo, img {
   height: 100%;
 }
 
@@ -136,6 +139,21 @@ a {
   100% {
     box-shadow: 0 20px 0 rgba(255,204,6,0), 0 5px 0 rgba(255,204,6,.25);
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.5s;
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+  overflow: none;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+  transform: translate(50%, 0);
+  overflow: none;
 }
 
 </style>
