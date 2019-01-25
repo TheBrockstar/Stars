@@ -28,10 +28,10 @@ export default {
 @font-face {
   font-family: 'Bahnschrift';
   src: url('./assets/bahnschrift/bahnschrift.eot'); /* IE9 Compat Modes */
-  src: url('./assets/bahnschrift/bahnschrift.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./assets/bahnschrift/bahnschrift.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./assets/bahnschrift/bahnschrift.woff') format('woff'), /* Pretty Modern Browsers */
-       url('./assets/bahnschrift/bahnschrift.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('./assets/bahnschrift/bahnschrift.eot?#iefix') format('embedded-opentype'); /* IE6-IE8 */
+  src: url('./assets/bahnschrift/bahnschrift.woff2') format('woff2'); /* Super Modern Browsers */
+  src: url('./assets/bahnschrift/bahnschrift.woff') format('woff'); /* Pretty Modern Browsers */
+  src: url('./assets/bahnschrift/bahnschrift.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
 * {
@@ -154,6 +154,26 @@ a {
   opacity: 0;
   transform: translate(50%, 0);
   overflow: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #app h1 {
+    font-size: 25px;
+  }
+
+  #bmr-container {
+    height: 125px;
+    padding: 13px 8% 45px 8%;
+    flex-direction: column;
+  }
+
+  #bmr-container:hover {
+  height: 110px;
+  padding: 13px 8% 30px 8%;
+  border-bottom-left-radius: 70%0px;
+  border-bottom-right-radius: 70%0px;
+  margin: 0px -5%;
+}
 }
 
 </style>
