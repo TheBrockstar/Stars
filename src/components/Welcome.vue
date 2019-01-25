@@ -12,8 +12,7 @@ export default {
   name: 'Welcome',
   data () {
     return {
-      tagline: 'Welcome! My Portfolio is Under Construction...',
-      star: [1]
+      tagline: 'Welcome! My Portfolio is Under Construction...'
     }
   }
 }
@@ -41,6 +40,8 @@ a
   display: flex;
   align-items: center;
   justify-content: center;
+
+// Star Field
 
 .star
   position: absolute;

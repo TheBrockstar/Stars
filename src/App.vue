@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="bmr-container">
-      <img src="./assets/great5.png">
+      <img src="./assets/logo-grey.png">
       <div class="navigation">
         <a href="#">Story</a>
         <a href="#">Projects</a>
@@ -28,6 +28,11 @@ export default {
        url('./assets/bahnschrift/bahnschrift.woff') format('woff'), /* Pretty Modern Browsers */
        url('./assets/bahnschrift/bahnschrift.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
+
+* {
+  box-sizing: border-box;
+}
+
 html, body, #app {
   height: 100%;
 }
@@ -59,26 +64,67 @@ a {
 }
 
 #bmr-container {
-  height: 89px;
-  width: 94%;
+  height: 99px;
+  width: 110%;
   position: fixed;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 700;
   word-spacing: 15px;
-  background-color: rgb(255, 204, 0);
-  padding: 13px 3%;
-  /* border-bottom: 3px solid #4b7072; */
-  -webkit-box-shadow: 0 5px 0px rgba(255, 204, 0, .5);
-  -moz-box-shadow: 0 5px 0px rgba(255, 204, 0, .5);
-  box-shadow: 0 5px 0px rgba(255, 204, 06, .5);
+  background-color: #fc0;
+  padding: 13px 8% 23px 8%;
+  box-shadow: 0 20px 0 rgba(255,204,6,.5);
   z-index: 9999;
+  border-bottom-left-radius: 70%30px;
+  border-bottom-right-radius: 70%40px;
+  margin: 0px -5%;
+  animation: sun-glow ease-in 2s infinite;
+  content: ""
+}
+
+#app::before {
+  box-sizing: border-box;
+  height: 99px;
+  width: 110%;
+  position: fixed;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  word-spacing: 15px;
+  background-color: transparent;
+  padding: 13px 8% 23px 8%;
+  box-shadow: 0 20px 0 rgba(255,204,6,.5);
+  z-index: 9999;
+  border-bottom-left-radius: 70%30px;
+  border-bottom-right-radius: 70%40px;
+  margin: 0px -5%;
+  animation-delay: 1s;
+  animation: sun-glow 2s infinite;
+  content: ""
 }
 
 .navigation a:hover {
   text-decoration: underline
+}
+
+@keyframes sun-glow {
+  0% {
+    box-shadow: 0 0px 0 rgba(255,204,6,.5)
+  }
+
+  100% {
+    box-shadow: 0 20px 0 rgba(255,204,6,0)
+  }
 }
 
 </style>
