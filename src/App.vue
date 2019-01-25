@@ -33,7 +33,7 @@ html, body, #app {
 }
 
 body {
-  background-color: #8ED4DA;
+  background-color: rgb(0, 0, 102);
   padding: 0;
   margin: 0;
 }
@@ -53,7 +53,7 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: whitesmoke;
   margin-top: 0px;
   height: 100%;
 }
@@ -68,12 +68,17 @@ a {
   font-size: 30px;
   font-weight: bold;
   word-spacing: 15px;
-  background-color: salmon;
+  background-color: rgb(255, 204, 0);
   padding: 13px 3%;
-  border-bottom: 3px solid #4b7072;
-	-webkit-box-shadow: 0 5px 0px rgba(66, 66, 66, .5);
-	-moz-box-shadow: 0 5px 0px rgba(66, 66, 66, .5);
-	box-shadow: 0 5px 0px rgba(66, 66, 66, .5);
+  /* border-bottom: 3px solid #4b7072; */
+  -webkit-box-shadow: 0 5px 0px rgba(255, 204, 0, .5);
+  -moz-box-shadow: 0 5px 0px rgba(255, 204, 0, .5);
+  box-shadow: 0 5px 0px rgba(255, 204, 06, .5);
+  z-index: 9999;
+}
+
+.navigation a:hover {
+  text-decoration: underline
 }
 
 </style>
