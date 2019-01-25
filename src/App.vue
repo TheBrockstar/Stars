@@ -78,13 +78,21 @@ a {
   word-spacing: 15px;
   background-color: #fc0;
   padding: 13px 8% 23px 8%;
-  box-shadow: 0 20px 0 rgba(255,204,6,.5);
+  box-shadow: 0 20px 0 rgba(255,204,6,.5), 0 10px 0 rgba(255,204,6,.25);
   z-index: 9999;
   border-bottom-left-radius: 70%30px;
   border-bottom-right-radius: 70%40px;
   margin: 0px -5%;
   animation: sun-glow ease-in 2s infinite;
-  content: ""
+  transition: border-bottom-left-radius .5s, border-bottom-right-radius .5s, padding .5s, height .5s;
+}
+
+#bmr-container:hover {
+  height: 89px;
+  padding: 13px 8% 13px 8%;
+  border-bottom-left-radius: 70%0px;
+  border-bottom-right-radius: 70%0px;
+  margin: 0px -5%;
 }
 
 #app::before {
@@ -103,8 +111,8 @@ a {
   word-spacing: 15px;
   background-color: transparent;
   padding: 13px 8% 23px 8%;
-  box-shadow: 0 20px 0 rgba(255,204,6,.5);
-  z-index: 9999;
+  box-shadow: 0 20px 0 rgba(255,204,6,.5), 0 5px 0 rgba(255,204,6,.25);
+  z-index: 9998;
   border-bottom-left-radius: 70%30px;
   border-bottom-right-radius: 70%40px;
   margin: 0px -5%;
@@ -119,11 +127,11 @@ a {
 
 @keyframes sun-glow {
   0% {
-    box-shadow: 0 0px 0 rgba(255,204,6,.5)
+    box-shadow: 0 0px 0 rgba(255,204,6,.5), 0 5px 0 rgba(255,204,6,.25);
   }
 
   100% {
-    box-shadow: 0 20px 0 rgba(255,204,6,0)
+    box-shadow: 0 20px 0 rgba(255,204,6,0), 0 5px 0 rgba(255,204,6,.25);
   }
 }
 
