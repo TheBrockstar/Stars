@@ -44,7 +44,9 @@ html, body, #app {
 }
 
 body {
-  background-color: rgb(0, 0, 102);
+  /* background-color: rgb(0, 0, 102); */
+  background: radial-gradient( 75% 16% at 50% top, #FC0, rgba(0, 0, 102, 0) ),
+  radial-gradient( 100% 10% at 50% bottom, #0b0b21  0%, #040448 33%, #000066 100%);
   padding: 0;
   margin: 0;
 }
