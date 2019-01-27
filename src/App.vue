@@ -44,9 +44,9 @@ html, body, #app {
 }
 
 body {
-  /* background-color: rgb(0, 0, 102); */
+  background-color: rgb(0, 0, 102);
   background: radial-gradient( 75% 145px at 50% top, #FC0, rgba(0, 0, 102, 0) ),
-  radial-gradient( 100% 120px at 50% bottom, #0b0b21  0%, #040448 33%, #000066 100%);
+  radial-gradient( 150% 120px at 50% bottom, #0b0b21  0%, #040448 33%, #000066 100%);
   padding: 0;
   margin: 0;
 }
@@ -159,6 +159,12 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
+
+  body {
+    background: radial-gradient(150% 170px at 50% top, #FC0, rgba(0, 0, 102, 0) ),
+    radial-gradient( 150% 110px at 50% bottom, #0b0b21  0%, #040448 33%, #000066 100%);
+  }
+
   #app h1 {
     font-size: 25px;
   }
