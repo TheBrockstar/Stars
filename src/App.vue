@@ -23,8 +23,8 @@ export default {
 }
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+<style lang="less">
+@import (css) url('https://fonts.googleapis.com/css?family=Poiret+One');
 @font-face {
   font-family: 'Bahnschrift';
   src: url('./assets/bahnschrift/bahnschrift.eot'); /* IE9 Compat Modes */
@@ -149,6 +149,9 @@ a {
   transition-property: opacity, transform;
   transition-timing-function: ease;
   overflow: none;
+  .stars {
+    width: 20px;
+  }
 }
 
 .fade-enter,
