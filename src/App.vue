@@ -12,6 +12,9 @@
     <div class='stars' id='giant-stars'></div>
     <div class='stars' id='supergiant-stars'></div>
     <transition name="fade" mode="out-in">
+      <div class='stars' id='dwarf-stars'></div>
+      <div class='stars' id='giant-stars'></div>
+      <div class='stars' id='supergiant-stars'></div>
       <router-view/>
     </transition>
   </div>
