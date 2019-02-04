@@ -8,9 +8,11 @@
         <router-link to="/contact">Contact</router-link>
       </div>
     </div>
-    <div class='stars' id='dwarf-stars'></div>
-    <div class='stars' id='giant-stars'></div>
-    <div class='stars' id='supergiant-stars'></div>
+    <div class='starfield'>
+      <div class='stars' id='dwarf-stars'></div>
+      <div class='stars' id='giant-stars'></div>
+      <div class='stars' id='supergiant-stars'></div>
+    </div>
     <transition name="fade" mode="out-in">
       <router-view/>
     </transition>
@@ -193,22 +195,13 @@ a {
 
 <style lang="sass" scoped>
 
-.star
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: whitesmoke;
-
 @function safe-unquote ($param)
   @return if(type-of($param) == string, unquote($param), $param)
 
 @function multiple-box-shadow ($stars)
   $bxshadow: ()
   @for $i from 1 to $stars
-    $bxshadow: append($bxshadow, (random(2000) + 0px) (random(2000) + 0px) #fff, comma)
+    $bxshadow: append($bxshadow, (random(2000) - random(2000) + 0px) (random(2000)- random(2000) + 0px) #fff, comma)
   @return safe-unquote($bxshadow);
 
 $dwarf-shadows: multiple-box-shadow(500)
@@ -220,8 +213,8 @@ html
 
 .stars
   position: absolute;
-  top: 0%
-  left: 0%
+  top: 50%
+  left: 50%
   border-radius: 50%
   background: transparent
 

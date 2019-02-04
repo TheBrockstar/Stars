@@ -52,60 +52,81 @@ a
   align-items: center;
   justify-content: center;
 
-.nose
-  height: 300px;
-  width: 200px;
-  background-color: lightgrey;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-top: 20px solid slategrey;
-  padding-top: 50px;
-  &:after // Porthole
-    display: inline-block;
-    height: 125px;
-    width: 125px;
-    border-radius: 50%;
-    background-color: black;
-    border: 15px solid slategrey;
-    content: "";
+  .nose
+    height: 300px;
+    width: 200px;
+    background-color: lightgrey;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top: 20px solid slategrey;
+    padding-top: 50px;
+    &:after // Porthole
+      display: inline-block;
+      height: 125px;
+      width: 125px;
+      border-radius: 50%;
+      background-color: black;
+      border: 15px solid slategrey;
+      content: "";
 
-.fuselage
-  display: flex;
-  height: 400px;
-  width: 200px;
-  background-color: lightgrey;
-  border-bottom-right-radius: 25%;
-  border-bottom-left-radius: 25%;
+  .fuselage
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 400px;
+    width: 200px;
+    background-color: lightgrey;
+    border-bottom-right-radius: 25%;
+    border-bottom-left-radius: 25%;
 
-.fins
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  width: 150%;
-  top: -150px;
+    &:after // Engine Glow
+      position: relative;
+      bottom: -80px;
+      content: "";
+      display: inline-block;
+      height: 150px;
+      width: 100px;
+      background: radial-gradient(60% 160px at 50% top, #FC0, rgba(0, 0, 0, 0));
+      z-index: -1;
+      animation: engine-pulse .1s infinite;
 
-  &:before // Porthole
-    content: "";
-    display: inline-block;
-    height: 100px;
-    width: 150px;
-    background-color: slategrey;
-    transform: rotate(310deg) skew(-40deg, 0deg);
-    border-top-left-radius: 30%;
-    // border-bottom-left-radius: 10%;
-    border-bottom: 10px solid lightgrey;
-    z-index: -1;
+  .fins
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 150%;
+    top: -150px;
 
-  &:after // Porthole
-    content: "";
-    display: inline-block;
-    height: 100px;
-    width: 150px;
-    background-color: slategrey;
-    transform: rotate(50deg) skew(40deg, 0deg);
-    border-top-right-radius: 30%;
-    // border-bottom-right-radius: 10%;
-    border-bottom: 10px solid lightgrey;
-    z-index: -1;
+    &:before // Left Fin
+      content: "";
+      display: inline-block;
+      height: 100px;
+      width: 150px;
+      background-color: slategrey;
+      transform: rotate(310deg) skew(-40deg, 0deg);
+      border-top-left-radius: 30%;
+      border-bottom-left-radius: 5%;
+      border-bottom: 10px solid lightgrey;
+      z-index: -1;
+
+    &:after // Right Fin
+      content: "";
+      display: inline-block;
+      height: 100px;
+      width: 150px;
+      background-color: slategrey;
+      transform: rotate(50deg) skew(40deg, 0deg);
+      border-top-right-radius: 30%;
+      border-bottom-right-radius: 5%;
+      border-bottom: 10px solid lightgrey;
+      z-index: -1;
+
+  @keyframes engine-pulse
+    0%
+      background: radial-gradient(60% 160px at 50% top, #FC0, rgba(0, 0, 0, 0));
+    50%
+      background: radial-gradient(60% 155px at 50% top, #FC0, rgba(0, 0, 0, 0));
+    100%
+      background: radial-gradient(60% 160px at 50% top, #FC0, rgba(0, 0, 0, 0));
 
 </style>

@@ -1,9 +1,6 @@
 <template>
   <div class="welcome">
     <h1>A long time ago <br/><br/>{{ greeting }}<br/><br/>{{ tagline }}</h1>
-    <div class='stars' id='dwarf-stars'></div>
-    <div class='stars' id='giant-stars'></div>
-    <div class='stars' id='supergiant-stars'></div>
   </div>
 </template>
 
