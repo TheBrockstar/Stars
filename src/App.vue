@@ -211,6 +211,9 @@ $supergiant-shadows: multiple-box-shadow(100)
 html
   overflow: hidden
 
+.starfield
+  animation: space-spin 300s linear infinite;
+
 .stars
   position: absolute;
   top: 50%
@@ -316,4 +319,10 @@ html
     box-shadow: $stars;
   100%
     box-shadow: $dwarf-shadows;
+
+@keyframes space-spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
 </style>
