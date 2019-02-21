@@ -112,7 +112,7 @@ p
   max-width: 600px;
 
 .big-me
-  height: 50%;
+  height: 80%;
   width: 30%;
   border-radius: 25px;
   background-image: url("../assets/bigme.jpg");

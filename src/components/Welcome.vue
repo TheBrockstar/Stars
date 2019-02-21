@@ -52,7 +52,8 @@ span.sun
   color: #FC0;
 
 .welcome
-  height: 100%;
+  // margin-top: 150px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -61,55 +62,61 @@ span.sun
     margin-top: 10%;
 
 .rocketship
-  z-index: 9999;
+  z-index: 9998;
   display: flex;
   margin-top: 1800px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform: scale(1, 1)
+  transform: scale(6.66, 6.66)
   animation-delay: 1s;
   animation: fly-in 6s;
   width: 48%;
+  @media screen and (max-height: 900px)
+    margin-top: 1400px;
+    transform: scale(5, 5);
+  @media screen and (max-height: 650px)
+    margin-top: 1000px;
+    transform: scale(3.5, 3.5);
 
   .nose
-    height: 900px;
-    width: 600px;
+    height: 135px;
+    width: 90px;
     background-color: lightgrey;
     border-top-right-radius: 50%;
     border-top-left-radius: 50%;
-    border-top: 60px solid #2E353C;
-    padding-top: 150px;
+    border-top: 9px solid #2E353C;
+    padding-top: 22.5px;
     margin-bottom: -5px;
     &:after // Porthole
       display: inline-block;
-      height: 375px;
-      width: 375px;
+      height: 56.25px;
+      width: 56.25px;
       border-radius: 50%;
       background-image: url("../assets/me.jpg");
       background-size: cover;
       background-color: black;
-      border: 45px solid #2E353C;
+      border: 6.75px solid #2E353C;
       content: "";
 
   .fuselage
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    height: 1200px;
-    width: 600px;
+    height: 180px;
+    width: 90px;
     background-color: lightgrey;
     border-bottom-right-radius: 25%;
     border-bottom-left-radius: 25%;
 
     &:after // Engine Glow
       position: relative;
-      bottom: -240px;
+      bottom: -36px;
       content: "";
       display: inline-block;
-      height: 450px;
-      width: 300px;
-      background: radial-gradient(60% 480px at 50% top, #FC0, rgba(0, 0, 0, 0));
+      height: 67.5px;
+      width: 45px;
+      background: radial-gradient(60% 72px at 50% top, #FC0, rgba(0, 0, 0, 0));
       z-index: -1;
       animation: engine-pulse .1s infinite;
 
@@ -117,51 +124,51 @@ span.sun
     position: relative;
     display: flex;
     justify-content: space-around;
-    width: 150%;
-    top: -450px;
+    width: 22.5%;
+    top: -67.5px;
 
     &:before // Left Fin
       content: "";
       display: inline-block;
-      height: 300px;
-      width: 450px;
+      height: 45px;
+      width: 67.5px;
       background-color: #2E353C;
       transform: rotate(310deg) skew(-40deg, 0deg);
       border-top-left-radius: 30%;
       border-bottom-left-radius: 5%;
-      border-bottom: 30px solid lightgrey;
+      border-bottom: 4.5px solid lightgrey;
       z-index: -1;
 
     &:after // Right Fin
       content: "";
       display: inline-block;
-      height: 300px;
-      width: 450px;
+      height: 45px;
+      width: 67.5px;
       background-color: #2E353C;
       transform: rotate(50deg) skew(40deg, 0deg);
       border-top-right-radius: 30%;
       border-bottom-right-radius: 5%;
-      border-bottom: 30px solid lightgrey;
+      border-bottom: 4.5px solid lightgrey;
       z-index: -1;
 
   @keyframes engine-pulse
     0%
-      background: radial-gradient(60% 480px at 50% top, #FC0, rgba(0, 0, 0, 0));
+      background: radial-gradient(60% 72px at 50% top, #FC0, rgba(0, 0, 0, 0));
     50%
-      background: radial-gradient(60% 465px at 50% top, #FC0, rgba(0, 0, 0, 0));
+      background: radial-gradient(60% 70px at 50% top, #FC0, rgba(0, 0, 0, 0));
     100%
-      background: radial-gradient(60% 480px at 50% top, #FC0, rgba(0, 0, 0, 0));
+      background: radial-gradient(60% 72px at 50% top, #FC0, rgba(0, 0, 0, 0));
 
   @keyframes fly-in
     0%
       translate3d(0,0,0)
-      transform: scale(.15, .15)
+      transform: scale(1, 1)
       margin-top: 100%;
     50%
-      transform: scale(.15, .15)
+      transform: scale(1, 1)
       margin-top: 0%;
     100%
       margin-top: 1800px;
-      transform: scale(1, 1)
+      transform: scale(6.66, 6.66)
 
 </style>

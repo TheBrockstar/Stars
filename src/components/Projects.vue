@@ -71,9 +71,6 @@
             <li>Next Steps: Save the size and position of notes that have been dragged/resized. Add
               tablet and mobile media queries and refactor drag and drop to handle touch events.
             </li>
-            <li>Implemented a firebase realtime database to handle live updates to the map, users, job
-              postings, and more. Used redundancy to speed up queries.
-            </li>
           </ul>
         </div>
       </section>
