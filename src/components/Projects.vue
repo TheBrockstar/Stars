@@ -1,9 +1,9 @@
 <template>
   <div class="story">
+    <article class="projects">
     <h1>
       {{ greeting }} <a href="https://github.com/TheBrockstar">{{ tagline }}</a>
     </h1>
-    <article class="projects">
       <section class="project"
       v-bind:class="{ flip: project1 }"
       v-on:click="project1 = !project1">
@@ -132,6 +132,12 @@ a
   background-color: rgba(255,255,255,.1);
   transition: background-color .2s ease, color .2s ease, height .5s;
   color: white;
+  @media screen and (max-width: 1600px)
+    width: 40%;
+  @media screen and (max-width: 1200px)
+    width: 80%;
+    max-width: 600px;
+    margin-top: 50px;
 
   .description
     display: none;
@@ -152,6 +158,17 @@ a
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  h1
+    width: 100%;
+  @media screen and (max-width: 1200px)
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding-top: 65%;
+  @media screen and (max-width: 1000px)
+    padding-top: 75%;
+  @media screen and (max-width: 900px)
+    padding-top: 150%;
 
 .story
   padding-top: 100px;
@@ -160,5 +177,8 @@ a
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  overflow-y: auto;
+  @media screen and (max-width: 900px)
+    padding-top: 150%;
 
 </style>
