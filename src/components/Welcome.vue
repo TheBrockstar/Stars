@@ -78,8 +78,8 @@ span.sun
   align-items: center;
   justify-content: center;
   transform: scale(6.66, 6.66);
-  // animation-delay: 1s;
-  // animation: fly-in-bottom-big 6s;
+  animation-delay: 1s;
+  animation: fly-in-bottom-big 6s;
   width: 48%;
   @media screen and (max-width: 1200px)
     margin-top: 1200px;
