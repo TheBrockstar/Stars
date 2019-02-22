@@ -8,9 +8,11 @@
         <router-link to="/contact">Contact</router-link>
       </div>
     </div>
-    <div class='stars' id='dwarf-stars'></div>
-    <div class='stars' id='giant-stars'></div>
-    <div class='stars' id='supergiant-stars'></div>
+    <div class='starfield'>
+      <div class='stars' id='dwarf-stars'></div>
+      <div class='stars' id='giant-stars'></div>
+      <div class='stars' id='supergiant-stars'></div>
+    </div>
     <transition name="fade" mode="out-in">
       <router-view/>
     </transition>
@@ -72,7 +74,7 @@ a {
 }
 
 #bmr-container {
-  height: 99px;
+  height: 89px;
   width: 110%;
   position: fixed;
   display: -ms-flexbox;
@@ -85,22 +87,13 @@ a {
   font-weight: 700;
   word-spacing: 15px;
   background-color: #fc0;
-  padding: 13px 8% 23px 8%;
-  box-shadow: 0 20px 0 rgba(255,204,6,.5), 0 10px 0 rgba(255,204,6,.25);
+  padding: 13px 8% 13px 8%;  box-shadow: 0 20px 0 rgba(255,204,6,.5), 0 10px 0 rgba(255,204,6,.25);
   z-index: 9999;
-  border-bottom-left-radius: 70%30px;
-  border-bottom-right-radius: 70%40px;
-  margin: 0px -5%;
-  animation: sun-glow ease-in 2s infinite;
-  transition: border-bottom-left-radius .5s, border-bottom-right-radius .5s, padding .5s, height .5s;
-}
-
-#bmr-container:hover {
-  height: 89px;
-  padding: 13px 8% 13px 8%;
   border-bottom-left-radius: 70%0px;
   border-bottom-right-radius: 70%0px;
   margin: 0px -5%;
+  animation: sun-glow ease-in 2s infinite;
+  transition: border-bottom-left-radius .5s, border-bottom-right-radius .5s, padding .5s, height .5s;
 }
 
 #app::before {
@@ -173,18 +166,14 @@ a {
   }
 
   #bmr-container {
-    height: 125px;
-    padding: 13px 8% 45px 8%;
-    flex-direction: column;
-  }
-
-  #bmr-container:hover {
   height: 110px;
   padding: 13px 8% 30px 8%;
   border-bottom-left-radius: 70%0px;
   border-bottom-right-radius: 70%0px;
   margin: 0px -5%;
-}
+    flex-direction: column;
+  }
+
 }
 
 </style>
@@ -193,35 +182,29 @@ a {
 
 <style lang="sass" scoped>
 
-.star
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: whitesmoke;
-
 @function safe-unquote ($param)
   @return if(type-of($param) == string, unquote($param), $param)
 
 @function multiple-box-shadow ($stars)
   $bxshadow: ()
   @for $i from 1 to $stars
-    $bxshadow: append($bxshadow, (random(2000) + 0px) (random(2000) + 0px) #fff, comma)
+    $bxshadow: append($bxshadow, (random(1500) - random(1500) + 0px) (random(1500)- random(1500) + 0px) #fff, comma)
   @return safe-unquote($bxshadow);
 
-$dwarf-shadows: multiple-box-shadow(500)
-$giant-shadows: multiple-box-shadow(200)
-$supergiant-shadows: multiple-box-shadow(100)
+$dwarf-shadows: multiple-box-shadow(300)
+$giant-shadows: multiple-box-shadow(100)
+$supergiant-shadows: multiple-box-shadow(50)
 
 html
   overflow: hidden
 
+.starfield
+  animation: space-spin 300s linear infinite;
+
 .stars
   position: absolute;
-  top: 0%
-  left: 0%
+  top: 50%
+  left: 50%
   border-radius: 50%
   background: transparent
 
@@ -323,4 +306,10 @@ html
     box-shadow: $stars;
   100%
     box-shadow: $dwarf-shadows;
+
+@keyframes space-spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
 </style>
