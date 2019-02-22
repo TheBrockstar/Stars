@@ -11,7 +11,7 @@
           Mappa Job
         </h1>
         <div class="project-pic" >
-          <img src="./assets/mappajob.png"/>
+          <img src="../assets/mappajob.png"/>
         </div>
         <div class="description" >
           <ul>
@@ -47,7 +47,7 @@
           Lambda Notes
         </h1>
         <div class="project-pic">
-          <img src="./assets/lambdanotes.png"/>
+          <img src="../assets/lambdanotes.png"/>
         </div>
         <div class="description" >
           <ul>
