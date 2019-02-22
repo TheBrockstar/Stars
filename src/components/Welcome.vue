@@ -2,7 +2,9 @@
   <div class="welcome">
     <!-- <h1>Welcome! <br/><br/>{{ greeting }}<br/><br/>{{ tagline }}</h1> -->
     <div class="rocketship">
-      <div class="nose"></div>
+      <div class="nose">
+        <p>C.S.S. Brocketship</p>
+      </div>
       <div class="fuselage"></div>
       <div class="fins"></div>
     </div>
@@ -110,7 +112,14 @@ span.sun
     border-top: 9px solid #2E353C;
     padding-top: 22.5px;
     margin-bottom: -5px;
-    &:after // Porthole
+    p
+      position: relative;
+      font-size: 4px;
+      color: #2E353C;
+      top: -18px;
+      left: -42px;
+      transform: rotatez(90deg);
+    &:before // Porthole
       display: inline-block;
       height: 56.25px;
       width: 56.25px;
