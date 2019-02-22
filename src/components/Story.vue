@@ -107,17 +107,26 @@ a
 
 .container
   width: 48%;
+  max-height: 80%;
+  overflow-y: auto;
+  @media screen and (max-width:850px)
+    width: 80%;
+    overflow-y: visible;
 
 p
   max-width: 600px;
 
 .big-me
   height: 80%;
-  width: 30%;
+  width: 80%;
   border-radius: 25px;
   background-image: url("../assets/bigme.jpg");
   background-size: cover;
   margin-right: 10%;
+  @media screen and (max-width:850px)
+    min-height: 80%;
+    width: 70%;
+    margin-right: 0px;
 
 .skill-icons
   display: flex;
@@ -135,5 +144,9 @@ p
   align-items: center;
   justify-content: center;
   text-align: left;
+  @media screen and (max-width:850px)
+    flex-direction: column;
+    overflow-y: auto;
+    padding-top: 250px;
 
 </style>

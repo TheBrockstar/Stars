@@ -1,7 +1,6 @@
 <template>
   <div class="contact">
-    <h1>Ground Control to Major Tom...
-      <br/><br/>
+    <h1>
       {{ greeting }}
       <br/><br/>
       <a href="mailto:BrockMRohloff@gmail.com">{{ tagline }}</a>
@@ -14,7 +13,7 @@ export default {
   name: 'Story',
   data () {
     return {
-      greeting: 'You can reach me at:  ',
+      greeting: 'Please send all inquiries to: ',
       tagline: 'BrockMRohloff@gmail.com'
     }
   }

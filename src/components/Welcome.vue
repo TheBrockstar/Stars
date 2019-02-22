@@ -60,6 +60,15 @@ span.sun
   .container
     width: 45%;
     margin-top: 10%;
+    @media screen and (max-width: 800px)
+      margin-top: 15%;
+      font-size: 13px;
+    @media screen and (max-width: 700px)
+      margin-top: 5%;
+      width: 80%;
+    @media screen and (max-height: 650px)
+      margin-top: 15%;
+      font-size: 13px;
 
 .rocketship
   z-index: 9998;
@@ -68,16 +77,29 @@ span.sun
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform: scale(6.66, 6.66)
-  animation-delay: 1s;
-  animation: fly-in 6s;
+  transform: scale(6.66, 6.66);
+  // animation-delay: 1s;
+  // animation: fly-in-bottom-big 6s;
   width: 48%;
-  @media screen and (max-height: 900px)
+  @media screen and (max-width: 1200px)
+    margin-top: 1200px;
+    transform: scale(5, 5);
+  @media screen and (max-width: 1000px)
+    transform: rotatez(90deg) scale(3.5, 3.5);
+    margin-top: 900px;
+    transform: scale(3.5, 3.5);
+  @media screen and (max-width: 700px)
+    transform: rotatez(90deg) scale(3.5, 3.5);
+    margin-Left: -70vw;
+    margin-top: -50px;
+  @media screen and (max-height: 800px)
     margin-top: 1400px;
     transform: scale(5, 5);
+    animation: fly-in-bottom-med 6s;
   @media screen and (max-height: 650px)
     margin-top: 1000px;
     transform: scale(3.5, 3.5);
+    animation: fly-in-bottom-sml 6s;
 
   .nose
     height: 135px;
@@ -126,6 +148,8 @@ span.sun
     justify-content: space-around;
     width: 22.5%;
     top: -67.5px;
+    @media screen and (max-height: 650px)
+      width: 30%;
 
     &:before // Left Fin
       content: "";
@@ -170,5 +194,41 @@ span.sun
     100%
       margin-top: 1800px;
       transform: scale(6.66, 6.66)
+
+  @keyframes fly-in-bottom-big
+    0%
+      translate3d(0,0,0)
+      transform: scale(1, 1)
+      margin-top: 100%;
+    50%
+      transform: scale(1, 1)
+      margin-top: 0%;
+    100%
+      margin-top: 1800px;
+      transform: scale(6.66, 6.66)
+
+  @keyframes fly-in-bottom-med
+    0%
+      translate3d(0,0,0)
+      transform: scale(1, 1)
+      margin-top: 100%;
+    50%
+      transform: scale(1, 1)
+      margin-top: 0%;
+    100%
+      margin-top: 1400px;
+      transform: scale(5, 5)
+
+  @keyframes fly-in-bottom-sml
+    0%
+      translate3d(0,0,0)
+      transform: scale(1, 1)
+      margin-top: 100%;
+    50%
+      transform: scale(1, 1)
+      margin-top: 0%;
+    100%
+      margin-top: 1000px;
+      transform: scale(3.5, 3.5)
 
 </style>
